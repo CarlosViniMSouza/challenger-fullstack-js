@@ -1,1 +1,1 @@
-module.exports = { url: "mongodb://localhost:21515/carlosvinimsouza_db" };
+module.exports = { url: "mongodb+srv://carlosvinimsouza:user5599mongoose@challenger-fullstack-js.bapla.mongodb.net/challenger-fullstack-js?retryWrites=true&w=majority" };

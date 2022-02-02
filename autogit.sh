@@ -1,5 +1,5 @@
 git add -A
-git commit -m "Concluded | Time for remake this project!"
+git commit -m "DB included"
 git push
 git status
 exit
