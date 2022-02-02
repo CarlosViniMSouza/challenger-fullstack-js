@@ -1,5 +1,5 @@
 git add -A
-git commit -m "next Step: Define the routers for C.R.U.D. functions"
+git commit -m "Concluded | Time for remake this project!"
 git push
 git status
 exit

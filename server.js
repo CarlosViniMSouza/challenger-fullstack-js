@@ -9,16 +9,9 @@ var pgLocal = {
 
 app.use(cors(pgLocal));
 
-//analisa as requisicoes do tipo de conteudo
+// Analisa as requisicoes do tipo de conteudo
 app.use(express.json());
-
-//analisa as requisicoes do tipo de conteudo
 app.use(express.urlencoded({ extended: true }));
-
-//rota simples:
-app.get("/", (req, res) => {
-  res.json({ mes: "Bem-Vindo a minha REST API" })
-});
 
 db.mongo
   .connect(db.url, {
@@ -33,7 +26,15 @@ db.mongo
     process.exit();
   });
 
-//configurando porta para escutar requisicoes:
+
+// Rota simples:
+app.get("/", (req, res) => {
+  res.json({ mes: "Bem-Vindo a minha REST API" })
+});
+
+require("./app/routes/tutorial.routers")(app);
+
+// Configurando porta para escutar requisicoes:
 const PORT = process.env.PORT || 8786;
 
 app.listen(PORT, () => { console.log(`Servidor rodando na porta ${PORT}`) });
