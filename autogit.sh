@@ -1,5 +1,5 @@
 git add -A
-git commit -m "folder -> models: asset, company, unit, user -> adds"
+git commit -m "asset -> adds asset.controller & asset.routers"
 git push
 git status
 exit
