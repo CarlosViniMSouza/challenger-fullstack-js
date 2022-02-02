@@ -1,0 +1,23 @@
+{
+  "name": "challenger-fullstack",
+  "version": "1.0.0",
+  "description": "A application JS for CRUD",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest",
+    "api"
+  ],
+  "author": "carlosvinimsouza",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongose": "^0.0.2-security"
+  }
+}
