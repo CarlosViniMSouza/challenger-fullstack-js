@@ -5,7 +5,7 @@ const Tutorial = db.tutorials;
 exports.create = (req, res) => {
 
   if (!req.body.title) {
-    res.status(400).send({ message: "Conteudo nao pode estar vazio!" });
+    res.status(400).send({ message: "Conteúdo não pode estar vazio!" });
     return;
   }
 
@@ -22,7 +22,7 @@ exports.create = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: err.message || "Ocorreu algum erro ao criar o Tutorial."
+        message: err.message || "Ocorreu algum erro ao criar o tutorial."
       });
     });
 };
@@ -39,7 +39,7 @@ exports.findAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Algum erro ocorreu na recuperacao dos Tutoriais."
+          err.message || "Algum erro ocorreu na recuperação dos tutoriais."
       });
     });
 };
@@ -57,7 +57,7 @@ exports.findOne = (req, res) => {
     .catch(err => {
       res
         .status(500)
-        .send({ message: "Error retrieving Tutorial with id: " + id });
+        .send({ message: "Erro ao recuperar tutorial de id: " + id });
     });
 };
 
@@ -67,7 +67,7 @@ exports.update = (req, res) => {
 
   if (!req.body) {
     return res.status(400).send({
-      message: "Dados da atualizacao nao podem estar vazios!"
+      message: "Dados da atualização não podem estar vazios!"
     });
   }
 
@@ -75,7 +75,7 @@ exports.update = (req, res) => {
     .then(data => {
       if (!data) {
         res.status(404).send({
-          message: `Não foi possivel atualizar tutorial de id: ${id}. Talvez o tutorial nao foi encontrado!`
+          message: `Não foi possivel atualizar o tutorial de id: ${id}. Talvez o tutorial não foi encontrado!`
         });
       } else res.send({ message: "Tutorial foi atualizado com sucesso." });
     })
@@ -94,7 +94,7 @@ exports.delete = (req, res) => {
     .then(data => {
       if (!data) {
         res.status(404).send({
-          message: `Nao foi possivel deletar tutorial de id: ${id}. Talvez o tutorial nao foi encontrado!`
+          message: `Nãoo foi possivel deletar tutorial de id: ${id}. Talvez o tutorial não foi encontrado!`
         });
       } else {
         res.send({
@@ -104,7 +104,7 @@ exports.delete = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Nao foi possivel excluir o tutorial de id: " + id
+        message: "Não foi possivel excluir o tutorial de id: " + id
       });
     });
 };
@@ -114,13 +114,13 @@ exports.deleteAll = (req, res) => {
   Tutorial.deleteMany({})
     .then(data => {
       res.send({
-        message: `${data.deletedCount} Tutoriais foram deletados com sucesso!`
+        message: `${data.deletedCount} tutoriais foram deletados com sucesso!`
       });
     })
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Algum erro correu enquanto os tutoriais eram deletados."
+          err.message || "Algum erro ocorreu enquanto os tutoriais eram deletados."
       });
     });
 };

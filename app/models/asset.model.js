@@ -1,13 +1,13 @@
 module.exports = mongo => {
   var schema = mongo.Schema(
     {
-      image: Image,
+      // image: Image, -> how to resolve?
       name: String,
       description: String,
       model: String,
       owner: String,
       status: Boolean,
-      heath_level: Int8Array
+      heath_level: Number
     },
     { timestamps: true }
   );

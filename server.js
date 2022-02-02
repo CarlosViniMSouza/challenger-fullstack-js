@@ -33,6 +33,8 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/tutorial.routers")(app);
+require("./app/routes/asset.routers")(app);
+require("./app/routes/user.routers")(app);
 
 // Configurando porta para escutar requisicoes:
 const PORT = process.env.PORT || 8786;

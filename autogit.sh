@@ -1,5 +1,5 @@
 git add -A
-git commit -m "company|user|unit.model -> removed"
+git commit -m "user: model | controller | routers -> add"
 git push
 git status
 exit
