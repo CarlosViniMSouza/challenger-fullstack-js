@@ -1,15 +1,8 @@
 module.exports = mongo => {
   var schema = mongo.Schema(
     {
-      // image: Image, -> how to resolve?
-      name: String,
-      description: String,
-      model: String,
-      owner: String,
-      status: String,
-      heath_level: Number,
-      published: Boolean,
-      unit_lot: Number,
+      assetsLot: Number,
+      published: Boolean
     },
     { timestamps: true }
   );
@@ -20,8 +13,8 @@ module.exports = mongo => {
     return object;
   });
 
-  const Asset = mongo.model("asset", schema);
-  return Asset;
+  const Unit = mongo.model("unit", schema);
+  return Unit;
 };
 
 // each asset must have: image, name, description, model, owner, status and health_level

@@ -9,5 +9,6 @@ db.url = dbConfiguration.url;
 db.tutorials = require("./tutorial.model")(mongo);
 db.assets = require("./asset.model")(mongo);
 db.users = require("./user.model")(mongo);
+db.units = require("./unit.model")(mongo);
 
 module.exports = db;
