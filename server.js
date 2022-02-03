@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 var pgLocal = {
-  origin: "http://localhost:8787"
+  origin: "http://localhost:8788"
 };
 
 app.use(cors(pgLocal));
@@ -37,6 +37,6 @@ require("./app/routes/asset.routers")(app);
 require("./app/routes/user.routers")(app);
 
 // Configurando porta para escutar requisicoes:
-const PORT = process.env.PORT || 8786;
+const PORT = process.env.PORT || 8787;
 
 app.listen(PORT, () => { console.log(`Servidor rodando na porta ${PORT}`) });

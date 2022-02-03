@@ -15,8 +15,9 @@ exports.create = (req, res) => {
     description: req.body.description,
     model: req.body.model,
     owner: req.body.owner,
-    status: req.body.status ? req.body.status : false,
-    heath_level: req.body.heath_level
+    status: req.body.status,
+    heath_level: req.body.heath_level,
+    published: req.body.published ? req.body.published : false
   });
 
   asset
@@ -131,7 +132,7 @@ exports.deleteAll = (req, res) => {
 
 // Veja todas as pecas publicados
 exports.findAllPublished = (req, res) => {
-  Asset.find({ status: true })
+  Asset.find({ published: true })
     .then(data => {
       res.send(data);
     })

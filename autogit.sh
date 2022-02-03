@@ -1,5 +1,5 @@
 git add -A
-git commit -m "user: model | controller | routers -> add"
+git commit -m "user files -> remake"
 git push
 git status
 exit

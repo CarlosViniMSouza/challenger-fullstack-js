@@ -6,8 +6,9 @@ module.exports = mongo => {
       description: String,
       model: String,
       owner: String,
-      status: Boolean,
-      heath_level: Number
+      status: String,
+      heath_level: Number,
+      published: Boolean
     },
     { timestamps: true }
   );
